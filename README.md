@@ -1,32 +1,32 @@
 # SOS DAO
 
-SOS DAO, topluluk fonlarının şeffaf şekilde yönetilmesi ve bağış süreçlerinin zincir üstünde izlenmesi için geliştirilmiş bir platformdur.
+SOS DAO is a platform built for transparent community fund management and on-chain donation tracking.
 
-## Proje Özeti
+## Project Overview
 
-Bu repo 3 ana parçadan oluşur:
+This repository has 3 main parts:
 
-- `main/`: Akıllı kontratlar (Hardhat)
-- `ui/sosdao-ui-main/`: Web arayüzü (React + Redux + Wagmi)
-- `ui/sosdao-backend-master/`: API ve indexer servisleri (NestJS)
+- `main/`: Smart contracts (Hardhat)
+- `ui/sosdao-ui-main/`: Web interface (React + Redux + Wagmi)
+- `ui/sosdao-backend-master/`: API and indexing services (NestJS)
 
-Sistem, fon havuzlarına bağış yapılmasını, işlemlerin zincirden okunmasını ve bağışlara ait NFT mint akışını destekler.
+The system supports donations to fund pools, on-chain data synchronization, and donation NFT minting.
 
-## Mimari
+## Architecture
 
 ### 1. Smart Contracts (`main/`)
 
-Temel kontratlar:
+Core contracts:
 
-- `PoolManager`: Yeni havuz (pool) oluşturur
-- `Pool`: Fon kabulü ve havuz yönetimi
-- `Vault`: Çok imzalı işlem akışı
-- `Mint`: Bağışlara karşılık NFT üretimi
-- `Registry`: Kontrat adres kayıtları
-- `Authority`: Rol ve erişim kontrolü
-- `RequestManager`: Havuz harcama/istek yönetimi
+- `PoolManager`: Creates new pools
+- `Pool`: Handles fund deposits and pool operations
+- `Vault`: Multi-signature transaction flow
+- `Mint`: Mints NFTs for donations
+- `Registry`: Stores contract address mappings
+- `Authority`: Role-based access control
+- `RequestManager`: Manages spending/request workflows
 
-Teknolojiler:
+Tech stack:
 
 - Hardhat
 - OpenZeppelin Contracts
@@ -34,15 +34,15 @@ Teknolojiler:
 
 ### 2. Frontend (`ui/sosdao-ui-main/`)
 
-Frontend tarafı:
+Frontend features:
 
-- Cüzdan bağlantısı
-- Havuz listeleme ve detaylar
-- Bağış gönderme (native + ERC20)
-- NFT görüntüleme
-- Zincir üstü işlem linkleri
+- Wallet connection
+- Pool listing and pool detail pages
+- Donation flow (native + ERC20)
+- NFT display
+- On-chain transaction links
 
-Teknolojiler:
+Tech stack:
 
 - React
 - Redux + Redux-Saga
@@ -51,18 +51,18 @@ Teknolojiler:
 
 ### 3. Backend (`ui/sosdao-backend-master/`)
 
-Backend tarafı:
+Backend responsibilities:
 
-- Fon, bağış ve NFT verilerini zincirden toplayıp API olarak sunar
-- Düzenli cron senkronizasyonu ile event/log indexleme yapar
+- Reads fund, donation, and NFT data from chain and serves it via API
+- Runs periodic cron sync jobs for event/log indexing
 
-Teknolojiler:
+Tech stack:
 
 - NestJS
 - Ethers
 - Axios
 
-## Klasör Yapısı
+## Folder Structure
 
 ```text
 sos dao/
@@ -73,9 +73,9 @@ sos dao/
 └─ README.md
 ```
 
-## Kurulum
+## Setup
 
-Her alt proje kendi bağımlılıklarına sahiptir.
+Each subproject has its own dependencies.
 
 ### Smart Contracts
 
@@ -98,7 +98,7 @@ cd ui/sosdao-backend-master
 npm install
 ```
 
-## Çalıştırma
+## Run
 
 ### Smart Contracts
 
@@ -107,7 +107,7 @@ cd main
 npm run test
 ```
 
-> Not: `main/package.json` içinde varsayılan script `compile` değil, test/lint/coverage scriptleri tanımlıdır.
+> Note: `main/package.json` does not define a `compile` script by default. It includes test/lint/coverage scripts.
 
 ### Frontend
 
@@ -123,22 +123,22 @@ cd ui/sosdao-backend-master
 npm run start:dev
 ```
 
-## Ortam Değişkenleri
+## Environment Variables
 
-Frontend ve backend tarafında ağ, kontrat adresi ve provider bilgileri için `.env` dosyaları kullanılır.
+Frontend and backend use `.env` files for network and integration settings.
 
-Özellikle:
+Common values include:
 
-- Registry kontrat adresi
+- Registry contract address
 - RPC endpoint
 - WalletConnect project id
 
-## Notlar
+## Notes
 
-- Proje adı ve markalama **SOS DAO** olarak güncellenmiştir.
-- Akışta `Mint` kontratı NFT üretimi için kullanılır.
-- Ağ bağlantı URL’leri (`haqq` endpointleri) zincir erişimi için korunmuştur.
+- Project name and branding are updated to **SOS DAO**.
+- `Mint` is used as the NFT contract in the current flow.
+- Network connection URLs (`haqq` endpoints) are intentionally preserved for chain connectivity.
 
-## Lisans
+## License
 
-Bu repository içindeki alt projeler kendi lisans dosyalarına/satırlarına göre değerlendirilmelidir.
+Licensing should be evaluated per subproject based on each package/license declaration.
