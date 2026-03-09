@@ -1,0 +1,211 @@
+.formApproveButton {
+  background-color: rgba(17, 210, 222, 1) !important;
+  color: #fff !important;
+  border: #e70d77 !important;
+  box-shadow: none !important;
+  width: 100%;
+}
+
+.formCheck {
+  padding-left: 0;
+}
+
+.formDonateButton {
+  background-color: #e70d77 !important;
+  color: #fff !important;
+  border: #e70d77 !important;
+  box-shadow: none !important;
+  width: 100%;
+}
+
+hr {
+  border: 1px solid;
+  color: rgba(276, 276, 276, 0.4);
+  width: 80%;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.createButtonContainer {
+  text-align: end;
+  margin-top: 30px;
+}
+.addButtonContainer {
+  text-align: end;
+  align-self: flex-end;
+}
+
+.requestableCheckbox {
+  text-align: start;
+  margin-top: 30px;
+}
+
+.descText {
+  text-align: start;
+  font-size: small;
+}
+
+.requestForm {
+  p {
+    color: #bf1650;
+  }
+
+  p::before {
+    display: inline;
+    content: "⚠ ";
+  }
+
+  input,
+  textarea {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid white;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+
+  label {
+    line-height: 2;
+    text-align: left;
+    display: block;
+    margin-bottom: 13px;
+    margin-top: 13px;
+    color: white;
+    font-size: 14px;
+    font-weight: 200;
+  }
+
+  input[type="submit"] {
+    background: #ec5990;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 100;
+    letter-spacing: 10px;
+  }
+
+  button[type="submit"]:active,
+  input[type="button"]:active,
+  input[type="submit"]:active {
+    transition: 0.3s all;
+    transform: translateY(3px);
+    border: 1px solid transparent;
+    opacity: 0.8;
+  }
+
+  input:disabled {
+    opacity: 0;
+  }
+
+  input[type="button"]:hover {
+    transition: 0.3s all;
+  }
+
+  button[type="submit"],
+  input[type="button"],
+  input[type="submit"] {
+    -webkit-appearance: none;
+  }
+}
+
+.addButton {
+  /* background-color: #e70d77 !important; */
+  color: #fff !important;
+  border: 0;
+  box-shadow: none !important;
+}
+
+.createButton {
+  background-color: rgba(17, 210, 222, 1) !important;
+  color: #fff !important;
+  border: #e70d77 !important;
+  box-shadow: none !important;
+}
+
+.requestListHeader {
+  color: #ffffff;
+  text-align: left;
+  justify-content: space-between;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.requestListRow {
+  padding: 1em;
+  margin: 0 -1em;
+  text-align: center;
+  border-bottom: 1px solid rgba(276, 276, 276, 0.4);
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+
+  a {
+    color: inherit;
+  }
+
+  &:last-child {
+    border: 0;
+  }
+}
+
+.checkRow {
+  text-align: center;
+  color: white;
+  font-weight: 400;
+
+  padding: 1em;
+  margin: 0 -1em;
+
+  border-bottom: 1px solid rgba(276, 276, 276, 0.4);
+
+  .checkName,
+  .checkApprover {
+    button {
+      font-size: 14px;
+    }
+    font-size: 14px;
+  }
+
+  .checkName {
+    text-align: left;
+  }
+
+  .checkApprover {
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+    overflow: hidden;
+    align-items: center;
+  }
+
+  &:last-child {
+    border: 0;
+    padding-bottom: 0;
+  }
+}
+
+.approveButton {
+  background-color: rgba(17, 210, 222, 1) !important;
+  color: #fff !important;
+  border: #e70d77 !important;
+  box-shadow: none !important;
+}
+
+.createRequestButton {
+  background-color: #e70d77;
+  border-radius: 15px;
+  color: #fff !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  display: flex;
+  justify-content: flex-end;
+  &:hover {
+    text-decoration: none !important;
+  }
+}

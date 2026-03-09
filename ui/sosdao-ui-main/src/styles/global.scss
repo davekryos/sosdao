@@ -1,0 +1,127 @@
+hr {
+  border: 1px solid;
+  color: rgba(276, 276, 276, 0.4);
+  width: 80%;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.card {
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  background-color: rgba(30, 30, 74, 0.5);
+  box-shadow:
+    rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(276, 276, 276, 0.4) 0px 2px 4px -1px;
+  border: 1px solid rgba(276, 276, 276, 0.1);
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.spinnerContainer {
+  color: #fff;
+  text-align: center;
+  margin-top: 200px;
+}
+
+.balance {
+  span {
+    font-size: 80%;
+    font-weight: 100;
+  }
+}
+
+.svgModal {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+}
+
+.svgModalButton {
+  background-color: #e70d77 !important;
+  border-color: #e70d77 !important;
+  border-radius: 15px !important;
+  box-shadow: none !important;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  justify-content: flex-end;
+  text-decoration: none !important;
+}
+
+.nft-container {
+  text {
+    font-family: Helvetica;
+    font-weight: 100;
+  }
+  .alpha {
+    opacity: 0.5;
+  }
+  .small {
+    font-size: 0.8rem;
+  }
+  .large {
+    font-size: 1.2rem;
+  }
+  .title {
+    fill: #fff;
+  }
+}
+
+.profile-nft-container {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  max-width: min-content;
+  width: min-content;
+}
+.profile-nft-container .nft-container {
+  padding: 5px;
+  max-width: min-content;
+  width: min-content;
+}
+.profile-nft-container .nft-container {
+  svg {
+    height: 300px;
+    width: 174px;
+    display: flex;
+    margin: auto;
+  }
+}
+.nftHover {
+  top: 0px;
+  position: relative;
+  background-color: #f2f8f9;
+  z-index: 0;
+
+  &:hover {
+    transition: all 0.2s ease-out;
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+    top: -4px;
+    border: 1px solid #cccccc;
+    background-color: white !important;
+  }
+}
+.clickIcon {
+  &:hover {
+    color: #007bff;
+  }
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+img.display {
+  max-width: 100%;
+}
+
+.bg-brand-light {
+  background-color: #b5d2cb;
+}

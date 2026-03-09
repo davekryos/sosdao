@@ -1,0 +1,50 @@
+{
+  "header": {
+    "home": "Home",
+    "funds": "Funds",
+    "createFund": "Create Fund",
+    "profile": "Profile",
+    "manage": "Manage",
+    "connectWallet": "Connect Wallet",
+    "connectionOptions": "Connection Options",
+    "metamaskName": "Metamask",
+    "close": "Close"
+  },
+  "createRequest": {
+    "requestAmount": "Request Amount",
+    "requestAmountPlaceholder": "Please enter request amount",
+    "allowedTokens": "Tokens",
+    "latitude": "Latitude",
+    "latitudePlaceholder": "Please enter latitude Eg: 41°00'16",
+    "longitude": "Longitude",
+    "longitudePlaceholder": "Please enter longitude Eg: 28°58'59",
+    "recipient": "Recipient Address",
+    "recipientPlaceholder": "Please enter address information Eg: 0x398...7fD6",
+    "description": "Description",
+    "descriptionPlaceholder": "Please enter a descriptive text of your request",
+    "createRequestButton": "Submit"
+  },
+  "createFund": {
+    "fundNameLabel": "Name:",
+    "fundNamePlaceholder": "UNICEF",
+    "descriptionLabel": "Description:",
+    "descriptionPlaceholder": "Explain briefly about fund's purpose",
+    "poolFeeRatio": "Fee Ratio",
+    "poolFeeRatioPlaceholder": "0",
+    "vaultOptionsLabel": "Vault:",
+    "vaultAddressLabel": " Address:",
+    "vaultAddressPlaceholder": "0x3984fa0aa046768C5A66F39456D87F036f117fD6",
+    "addAllowedTokenLabel": "Token Address:",
+    "addAllowedTokenPlaceholder": "0x3984fa0aa046768C5A66F39456D87F036f117fD6",
+    "allowedTokensLabel": "Allowed Tokens:",
+    "addAllowedTokenButtonLabel": "Add Token",
+    "jobNameLabel": "Name:",
+    "jobIdLabel": "Job ID:",
+    "jobNamePlaceholder": "John Doe",
+    "jobIdPlaceholder": "1",
+    "jobsLabel": "Jobs:",
+    "addJobButtonLabel": "Add Job",
+    "createRequestButton": "Submit",
+    "requestDesc": "This option determines whether a request can be made to a fund by others, or not"
+  }
+}

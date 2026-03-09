@@ -1,0 +1,43 @@
+.fundWrapper {
+  margin: 2rem 0;
+  background-color: #b5d2cb;
+  border-radius: 0.5rem;
+}
+
+.formApproveButton {
+  background-color: rgba(17, 210, 222, 1) !important;
+  color: #fff !important;
+  border: #e70d77 !important;
+  box-shadow: none !important;
+  width: 100%;
+}
+
+.formDonateButton {
+  background-color: #e70d77 !important;
+  color: #fff !important;
+  border: #e70d77 !important;
+  box-shadow: none !important;
+  width: 100%;
+}
+
+.tabs {
+  justify-content: center;
+  border: 0;
+  padding-bottom: 1rem;
+
+  a {
+    border-radius: 0.25rem;
+  }
+}
+
+.tabWrapper {
+  .nav-tabs {
+    border: 0 !important;
+  }
+
+  a.nav-item {
+    border: 0;
+    padding: 1em 1.5em;
+    color: #fff;
+  }
+}

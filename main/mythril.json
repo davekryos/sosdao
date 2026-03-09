@@ -1,0 +1,14 @@
+{
+  "remappings": [
+    "@openzeppelin/contracts/utils/Address.sol=node_modules/@openzeppelin/contracts/utils/Address.sol",
+    "@openzeppelin/contracts/proxy/utils/Initializable.sol=node_modules/@openzeppelin/contracts/proxy/utils/Initializable.sol",
+    "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol=node_modules/@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol",
+    "@openzeppelin/contracts/token/ERC20/extensions/IERC20Permit.sol=node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Permit.sol",
+    "@openzeppelin/contracts/utils/structs/EnumerableSet.sol=node_modules/@openzeppelin/contracts/utils/structs/EnumerableSet.sol",
+    "@openzeppelin/contracts/access/manager/IAccessManaged.sol=node_modules/@openzeppelin/contracts/access/manager/IAccessManaged.sol",
+    "@openzeppelin/contracts/token/ERC20/IERC20.sol=node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol",
+    "@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol=node_modules/@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol",
+    "@openzeppelin/contracts/utils/math/Math.sol=node_modules/@openzeppelin/contracts/utils/math/Math.sol",
+    "@openzeppelin/contracts/access/manager/AccessManaged.sol=node_modules/@openzeppelin/contracts/access/manager/AccessManaged.sol"
+  ]
+}
