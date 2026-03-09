@@ -14,8 +14,8 @@ const INITIAL_STATE = {
     avalanche: new ethers.providers.StaticJsonRpcProvider(
       process.env.REACT_APP_AVALANCHE_NODE
     ),
-    haqqTestEdge2: new ethers.providers.StaticJsonRpcProvider(
-      process.env.REACT_APP_HAQQT_NODE
+    sosTestnet: new ethers.providers.StaticJsonRpcProvider(
+      process.env.REACT_APP_SOS_TEST_NODE
     ),
   },
   provider: null,
@@ -24,7 +24,7 @@ const INITIAL_STATE = {
     localhost: process.env.REACT_APP_LOCAL_NODE,
     fuji: process.env.REACT_APP_FUJI_NODE,
     avalanche: process.env.REACT_APP_AVALANCHE_NODE,
-    haqqTestEdge2: process.env.REACT_APP_HAQQT_NODE,
+    sosTestnet: process.env.REACT_APP_SOS_TEST_NODE,
   },
 };
 

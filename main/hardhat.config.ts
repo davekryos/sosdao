@@ -25,28 +25,28 @@ const config: HardhatUserConfig = {
     ACLAdmin: 1,
   },
   networks: {
-    haqq: {
-      url: process.env.HAQQ_NODE || "",
-      chainId: parseInt(process.env.HAQQ_CHAIN_ID!),
+    sos: {
+      url: process.env.SOS_NODE || "",
+      chainId: parseInt(process.env.SOS_CHAIN_ID!),
       accounts: {
-        mnemonic: process.env.HAQQ_MNEMONIC || "",
+        mnemonic: process.env.SOS_MNEMONIC || "",
       },
       verify: {
         etherscan: {
-          apiUrl: "https://explorer.haqq.network/",
+          apiUrl: "https://explorer.sos.network/",
           apiKey: "",
         },
       },
     },
-    haqq_test: {
-      url: process.env.HAQQ_TEST_NODE || "",
-      chainId: parseInt(process.env.HAQQ_TEST_CHAIN_ID!),
+    sos_test: {
+      url: process.env.SOS_TEST_NODE || "",
+      chainId: parseInt(process.env.SOS_TEST_CHAIN_ID!),
       accounts: {
-        mnemonic: process.env.HAQQ_TEST_MNEMONIC || "",
+        mnemonic: process.env.SOS_TEST_MNEMONIC || "",
       },
       verify: {
         etherscan: {
-          apiUrl: "https://explorer.testedge2.haqq.network/",
+          apiUrl: "https://explorer.testedge2.sos.network/",
           apiKey: "",
         },
       },

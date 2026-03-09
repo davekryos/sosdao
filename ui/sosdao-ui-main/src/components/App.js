@@ -13,10 +13,10 @@ import NotificationContainer from "../common/react-notifications/NotificationCon
 import Router from "./Router";
 import Web3Modal from "./modals/web3Modal";
 
-const haqqTestEdge2 = {
+const sosTestnet = {
   id: 54211,
   name: "SOS DAO Testnet",
-  network: "haqqTestEdge2",
+  network: "sosTestnet",
   nativeCurrency: {
     decimals: 18,
     name: "SOS DAO Testnet",
@@ -24,26 +24,26 @@ const haqqTestEdge2 = {
   },
   rpcUrls: {
     default: {
-      http: ["https://rpc.eth.testedge2.haqq.network"],
+      http: [process.env.REACT_APP_SOS_TEST_NODE || ""],
     },
     public: {
-      http: ["https://rpc.eth.testedge2.haqq.network"],
+      http: [process.env.REACT_APP_SOS_TEST_NODE || ""],
     },
   },
   blockExplorers: {
     etherscan: {
       name: "explorer",
-      url: "https://explorer.testedge2.haqq.network",
+      url: process.env.REACT_APP_SOS_TEST_EXPLORER_URL || "",
     },
     default: {
       name: "explorer",
-      url: "https://explorer.testedge2.haqq.network",
+      url: process.env.REACT_APP_SOS_TEST_EXPLORER_URL || "",
     },
   },
   testnet: true,
 };
 
-const chains = [haqqTestEdge2, avalanche, avalancheFuji, mainnet];
+const chains = [sosTestnet, avalanche, avalancheFuji, mainnet];
 
 const { provider } = configureChains(chains, [
   publicProvider(),
@@ -74,7 +74,7 @@ const App = () => {
           <Router />
         </>
       </WagmiConfig>
-      <Web3Modal client={client} chains={chains} defaultChain={haqqTestEdge2} />
+      <Web3Modal client={client} chains={chains} defaultChain={sosTestnet} />
     </>
   );
 };

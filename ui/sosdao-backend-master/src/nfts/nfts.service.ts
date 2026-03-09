@@ -19,8 +19,8 @@ export class NftsService {
   ) {}
 
   private filePath = 'src/data/nfts.json';
-  private readonly providerUrl = 'https://rpc.eth.testedge2.haqq.network';
-  private readonly baseUri = 'https://explorer.testedge2.haqq.network';
+  private readonly providerUrl = process.env.SOS_TEST_RPC_URL || '';
+  private readonly baseUri = process.env.SOS_TEST_EXPLORER_URL || '';
   private readonly provider = new ethers.JsonRpcProvider(this.providerUrl);
   private readonly genesisBlock = 8136007;
   private fromBlock = this.genesisBlock;

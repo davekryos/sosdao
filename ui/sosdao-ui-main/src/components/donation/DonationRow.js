@@ -21,9 +21,9 @@ const DonationRow = ({ timestamp, donor, value, txHash, tokenAddress }) => {
       case 43113:
         return `https://testnet.snowtrace.io/tx/${txHash}`;
       case 54211:
-        return `https://explorer.testedge2.haqq.network/tx/${txHash}`;
+        return `${process.env.REACT_APP_SOS_TEST_EXPLORER_URL || "#"}/tx/${txHash}`;
       case 11235:
-        return `https://explorer.haqq.network/tx/${txHash}`;
+        return `${process.env.REACT_APP_SOS_EXPLORER_URL || "#"}/tx/${txHash}`;
       default:
         return "#";
     }

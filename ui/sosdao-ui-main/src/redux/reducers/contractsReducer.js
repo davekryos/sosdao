@@ -5,7 +5,7 @@ const REGISTRY_ADDRESSES = {
   fuji: process.env.REACT_APP_FUJI_REGISTRY_ADDRESS,
   localhost: process.env.REACT_APP_LOCAL_REGISTRY_ADDRESS,
   hardhat: process.env.REACT_APP_LOCAL_REGISTRY_ADDRESS,
-  haqqTestEdge2: process.env.REACT_APP_HAQQT_REGISTRY_ADDRESS,
+  sosTestnet: process.env.REACT_APP_SOS_TEST_REGISTRY_ADDRESS,
 };
 
 const INITIAL_STATE = {};

@@ -19,8 +19,8 @@ export class DonationsService implements OnModuleInit {
   ) {}
 
   private filePath = 'src/data/donations.json';
-  private readonly providerUrl = 'https://rpc.eth.testedge2.haqq.network';
-  private readonly baseUri = 'https://explorer.testedge2.haqq.network';
+  private readonly providerUrl = process.env.SOS_TEST_RPC_URL || '';
+  private readonly baseUri = process.env.SOS_TEST_EXPLORER_URL || '';
   private readonly contractAddress = process.env.REGISTRY_CONTRACT_ADDRESS;
   private readonly provider = new ethers.JsonRpcProvider(this.providerUrl);
   private readonly contract = new ethers.Contract(
@@ -123,10 +123,10 @@ export class DonationsService implements OnModuleInit {
 
   listenDonations() {
     try {
-      const providerUrl = 'https://rpc.eth.testedge2.haqq.network';
+      const providerUrl = process.env.SOS_TEST_RPC_URL || '';
       const provider = new ethers.JsonRpcProvider(providerUrl);
       /* const wsprovider = new ethers.WebSocketProvider(
-        'wss://rpc.eth.testedge2.haqq.network',
+        process.env.SOS_TEST_RPC_WS_URL || '',
       ); */
       /* const contract = new ethers.Contract(
         '0x1ae3A4b8e667c10AAE77b094d1F86BA17D8354AF',

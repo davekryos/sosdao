@@ -18,8 +18,8 @@ export class FundService {
   ) {}
 
   private filePath = 'src/data/funds.json';
-  private readonly providerUrl = 'https://rpc.eth.testedge2.haqq.network';
-  private readonly baseUri = 'https://explorer.testedge2.haqq.network';
+  private readonly providerUrl = process.env.SOS_TEST_RPC_URL || '';
+  private readonly baseUri = process.env.SOS_TEST_EXPLORER_URL || '';
   private readonly contractAddress = process.env.REGISTRY_CONTRACT_ADDRESS;
   private readonly provider = new ethers.JsonRpcProvider(this.providerUrl);
   private readonly contract = new ethers.Contract(
@@ -111,7 +111,7 @@ export class FundService {
   }
 
   async fetchFunds(): Promise<AxiosResponse<any>> {
-    const baseUri = 'https://explorer.testedge2.haqq.network';
+    const baseUri = process.env.SOS_TEST_EXPLORER_URL || '';
     const topic0 =
       '0x59e2c74eec80fd2f4206c919ae2d792790f37756550629fbf38dda88b0c6a913'; //FundCreated
     const contractAddress = '0x3d332C55b98DE2eBC404F180BdF045970Ed76a7D';
