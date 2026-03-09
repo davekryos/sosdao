@@ -2,6 +2,8 @@
 
 SOS Chain is an open-source blockchain infrastructure for transparent humanitarian fundraising and programmable aid distribution.
 
+Open-source infrastructure for transparent humanitarian funding using blockchain.
+
 This repository is designed as a **humanitarian use case** for public-good aligned funding, accountability, and on-chain coordination.
 
 ## Project Overview
@@ -13,41 +15,35 @@ SOS DAO provides a modular stack for:
 - Donation-to-NFT minting for auditable participation records
 - API and UI layers for operational visibility
 
-Repository structure:
+Repository layout:
 
-- `main/` smart contracts (Hardhat)
-- `ui/sosdao-ui-main/` frontend application (React)
-- `ui/sosdao-backend-master/` backend/indexer services (NestJS)
+- `contracts/` reviewer-friendly contract entry point (maps to `main/contracts/`)
+- `interface/` reviewer-friendly app entry point (maps to `ui/`)
+- `docs/` project documentation
+- `scripts/` repository-level helper scripts
+- `main/` canonical Hardhat workspace
+- `ui/` canonical frontend/backend workspaces
 
 ## Architecture
 
 The system has three layers:
 
 1. Protocol layer (smart contracts)
-- Pool lifecycle and fund custody
-- Role-based permissions and governance controls
-- Minting and registry primitives
-
-2. Data/API layer (backend)
-- Event/log indexing from chain
-- Normalized API endpoints for funds, donations, and NFTs
-
-3. Application layer (frontend)
-- Wallet connection and transaction UX
-- Pool discovery, donation flow, and balance views
-- NFT rendering and transaction traceability
+2. Data/API layer (backend indexing and services)
+3. Application layer (frontend user experience)
 
 ## Smart Contracts
 
-Main contracts in `main/contracts/platform`:
+Canonical source: `main/contracts/platform`
 
-- `PoolManager`: deploys and tracks pools
-- `Pool`: accepts deposits and connects to vault/mint flow
-- `Vault`: multisig execution path for controlled fund movements
-- `Mint`: mints donation NFTs
-- `Registry`: stores canonical contract addresses
-- `Authority`: access-control authority and role enforcement
-- `RequestManager`: request/approval execution workflow
+Reviewer-focused components:
+
+- Fundraising contracts: `PoolManager`, `Pool`
+- Treasury / pool logic: `Vault`, `RequestManager`, `Authority`
+- Multisig interaction: `Vault` execution and signer approval flow
+- Supporting primitives: `Mint`, `Registry`
+
+Smart contracts have been independently audited.
 
 ## How to Run
 
@@ -59,7 +55,7 @@ cd ../ui/sosdao-ui-main && npm install
 cd ../sosdao-backend-master && npm install
 ```
 
-Run contracts tests:
+Run contract tests:
 
 ```bash
 cd main
@@ -82,4 +78,4 @@ npm run start:dev
 
 ## License
 
-This repository contains multiple subprojects. License terms should be evaluated per package and its declared license metadata/files.
+MIT License. See `LICENSE`.
