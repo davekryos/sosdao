@@ -1,144 +1,85 @@
 # SOS DAO
 
-SOS DAO is a platform built for transparent community fund management and on-chain donation tracking.
+SOS Chain is an open-source blockchain infrastructure for transparent humanitarian fundraising and programmable aid distribution.
+
+This repository is designed as a **humanitarian use case** for public-good aligned funding, accountability, and on-chain coordination.
 
 ## Project Overview
 
-This repository has 3 main parts:
+SOS DAO provides a modular stack for:
 
-- `main/`: Smart contracts (Hardhat)
-- `ui/sosdao-ui-main/`: Web interface (React + Redux + Wagmi)
-- `ui/sosdao-backend-master/`: API and indexing services (NestJS)
+- Transparent fundraising through on-chain pools
+- Controlled treasury operations via role-based and multisig flows
+- Donation-to-NFT minting for auditable participation records
+- API and UI layers for operational visibility
 
-The system supports donations to fund pools, on-chain data synchronization, and donation NFT minting.
+Repository structure:
+
+- `main/` smart contracts (Hardhat)
+- `ui/sosdao-ui-main/` frontend application (React)
+- `ui/sosdao-backend-master/` backend/indexer services (NestJS)
 
 ## Architecture
 
-### 1. Smart Contracts (`main/`)
+The system has three layers:
 
-Core contracts:
+1. Protocol layer (smart contracts)
+- Pool lifecycle and fund custody
+- Role-based permissions and governance controls
+- Minting and registry primitives
 
-- `PoolManager`: Creates new pools
-- `Pool`: Handles fund deposits and pool operations
-- `Vault`: Multi-signature transaction flow
-- `Mint`: Mints NFTs for donations
-- `Registry`: Stores contract address mappings
-- `Authority`: Role-based access control
-- `RequestManager`: Manages spending/request workflows
+2. Data/API layer (backend)
+- Event/log indexing from chain
+- Normalized API endpoints for funds, donations, and NFTs
 
-Tech stack:
+3. Application layer (frontend)
+- Wallet connection and transaction UX
+- Pool discovery, donation flow, and balance views
+- NFT rendering and transaction traceability
 
-- Hardhat
-- OpenZeppelin Contracts
-- UUPS upgradeable pattern
+## Smart Contracts
 
-### 2. Frontend (`ui/sosdao-ui-main/`)
+Main contracts in `main/contracts/platform`:
 
-Frontend features:
+- `PoolManager`: deploys and tracks pools
+- `Pool`: accepts deposits and connects to vault/mint flow
+- `Vault`: multisig execution path for controlled fund movements
+- `Mint`: mints donation NFTs
+- `Registry`: stores canonical contract addresses
+- `Authority`: access-control authority and role enforcement
+- `RequestManager`: request/approval execution workflow
 
-- Wallet connection
-- Pool listing and pool detail pages
-- Donation flow (native + ERC20)
-- NFT display
-- On-chain transaction links
+## How to Run
 
-Tech stack:
-
-- React
-- Redux + Redux-Saga
-- Wagmi / Ethers
-- Bootstrap
-
-### 3. Backend (`ui/sosdao-backend-master/`)
-
-Backend responsibilities:
-
-- Reads fund, donation, and NFT data from chain and serves it via API
-- Runs periodic cron sync jobs for event/log indexing
-
-Tech stack:
-
-- NestJS
-- Ethers
-- Axios
-
-## Folder Structure
-
-```text
-sos dao/
-├─ main/                      # smart contracts
-├─ ui/
-│  ├─ sosdao-ui-main/         # frontend
-│  └─ sosdao-backend-master/  # backend
-└─ README.md
-```
-
-## Setup
-
-Each subproject has its own dependencies.
-
-### Smart Contracts
+Install dependencies per package:
 
 ```bash
-cd main
-npm install
+cd main && npm install
+cd ../ui/sosdao-ui-main && npm install
+cd ../sosdao-backend-master && npm install
 ```
 
-### Frontend
-
-```bash
-cd ui/sosdao-ui-main
-npm install
-```
-
-### Backend
-
-```bash
-cd ui/sosdao-backend-master
-npm install
-```
-
-## Run
-
-### Smart Contracts
+Run contracts tests:
 
 ```bash
 cd main
 npm run test
 ```
 
-> Note: `main/package.json` does not define a `compile` script by default. It includes test/lint/coverage scripts.
-
-### Frontend
+Run frontend:
 
 ```bash
 cd ui/sosdao-ui-main
 npm run start
 ```
 
-### Backend
+Run backend:
 
 ```bash
 cd ui/sosdao-backend-master
 npm run start:dev
 ```
 
-## Environment Variables
-
-Frontend and backend use `.env` files for network and integration settings.
-
-Common values include:
-
-- Registry contract address
-- RPC endpoint
-- WalletConnect project id
-
-## Notes
-
-- Project name and branding are updated to **SOS DAO**.
-- `Mint` is used as the NFT contract in the current flow.
-- Network connection URLs (`haqq` endpoints) are intentionally preserved for chain connectivity.
-
 ## License
 
-Licensing should be evaluated per subproject based on each package/license declaration.
+This repository contains multiple subprojects. License terms should be evaluated per package and its declared license metadata/files.
